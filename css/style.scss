@@ -120,27 +120,42 @@ h1, h2, h3, h4 {
 }
 .hero-search {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
+    justify-content: space-evenly;
+    border: 2px solid black;
+    margin-top: -50px;
+    z-index: 99;
+    background-color: white;
 }
 .search-part {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 10px;
-    border-right: 1px solid black;
-    margin-top: 5px;
+    justify-content: space-evenly;
+    margin: 10px 10px;
     p {
         font-family: PlayfairNormal;
-        font-size: 18px;
+        font-size: 16px;
     }
+    border-right: 1px solid black;
+    padding: 0 15px;
+    &:last-child{
+        border-right: 0px;
+    }
+    select {
+        width: 50px;
+        height: 25px;
+        margin-top: 10px;;
+        color: #33A8E4;
+    }
+    
 }
 .input-group {
-    max-width: 250px;
+    min-width: 200px;
     display: flex;
-    align-items: center; //stavi sve child elemente u 1 red pa u centar
+    align-items: center; //flex+stavi sve child elemente u 1 red pa u centar
+    justify-content: space-evenly;
+    margin-top: 10px;
     input {
         border:none;
         border-bottom: 1px solid black;
@@ -152,4 +167,31 @@ h1, h2, h3, h4 {
     .input-year {
         max-width: 80px;
     }
+    .input-dot {
+        font-size: 24px;
+        font-weight: bold;
+        padding: 0 5px;
+    }
+}
+.select-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center; //kad su poredjani u kolone onda align items gleda horizontalno svaki
+    justify-content: space-evenly;
+    select {
+        width: 50px;
+        height: 25px;
+        margin-top: 10px;;
+        color: #33A8E4;
+    }
+}
+.search-mag {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+.mag {
+    width: 50px;
+    height: 45px;
+    margin-left: 10px;
 }
