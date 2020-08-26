@@ -1,0 +1,155 @@
+// FONT LOADED
+@font-face {
+    font-family: 'Playfair';
+    src: url('../fonts/PlayfairDisplay-Bold.ttf');
+    font-weight: bold;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'PlayfairNormal';
+    src: url('../fonts/PlayfairDisplay-Regular.ttf');
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Bold.ttf');
+    font-weight: bold;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MontserratRegular';
+    src: url('../fonts/Montserrat-Regular.ttf');
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-SemiBold.ttf');
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Light.ttf');
+    font-weight: lighter;
+    font-display: swap;
+}
+// COLOR VARIABLE
+$blue: #33A8E4;
+$yellow: #F9B33F;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    font-size: 46px;
+}
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/hero-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 97%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+.nav-list {
+    list-style: none;
+    min-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: Montserrat;
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+    }
+}
+.hero-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero-intro {
+    width: 100%;
+    position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+.hero-img {
+    width: 100%;
+    height: auto;
+}
+.hero-text {
+    position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    h1 {
+        font-family: MontserratRegular;
+        color: white;
+    }
+    p {
+        max-width: 400px;
+        color: white;
+        text-align: center;
+        font-family: PlayfairNormal;
+        margin-top: 30px;;
+    }
+}
+.hero-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.search-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-right: 1px solid black;
+    margin-top: 5px;
+    p {
+        font-family: PlayfairNormal;
+        font-size: 18px;
+    }
+}
+.input-group {
+    max-width: 250px;
+    display: flex;
+    align-items: center; //stavi sve child elemente u 1 red pa u centar
+    input {
+        border:none;
+        border-bottom: 1px solid black;
+        outline: none;
+    }
+    .input-day {
+        max-width: 40px;
+    }
+    .input-year {
+        max-width: 80px;
+    }
+}
