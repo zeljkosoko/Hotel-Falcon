@@ -44,8 +44,20 @@ $yellow: #F9B33F;
     padding: 0;
 }
 
-h1, h2, h3 {
+h1 {
     font-size: 46px;
+}
+h2 {
+    font-size: 36px;
+}
+.btn {
+    background-color: $blue;
+    color: white;
+    font-family: PlayfairNormal;
+    font-size: 24px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
 }
 .container {
     max-width: 1400px;
@@ -221,3 +233,84 @@ h1, h2, h3 {
     position: absolute;
     right: -22px;
 }
+.separator {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+}
+.reservation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.reservation-text {
+    width: 40%;
+    padding: 0px 15px;
+}
+.reservation-image {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    position: relative;
+   
+}
+.reservation-title{
+    max-width: 350px;
+    font-family: Montserrat;
+    strong {
+        color: $blue;
+    }
+}
+.blue-line {
+    width: 174px;
+    height: 2px;
+    margin: 15px 0px 20px 0px;
+    background-color: $blue;
+}
+.reservation-desc{
+    font-size: 16px;
+    font-family: PlayfairNormal;
+}
+.reservation-info {
+    position: absolute;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.90);
+    right: 0px;
+    h2 {
+        color: $blue;
+        border-bottom: 2px solid $blue;
+        display: table;
+        font-family: MontserratRegular;
+        margin: 30px 0px 0px 20px;
+    }
+    p {
+        font-family: PlayfairNormal;
+        font-size: 16px;
+        color: white;
+        padding: 15px 50px 20px 20px;
+    }
+    
+}
+.res-form {
+    margin: 20px 0px 0px 20px;
+    .input-block {
+        select {
+            border: none;
+            outline: none;
+            font-family: MontserratRegular;
+            font-size: 16px;
+            margin-right: 20px;
+            background-color: rgba(0, 0, 0, 0.90);
+            color: white;
+            padding: 5px 10px;
+            border: 1px solid white;
+        }
+    }
+    input[type="submit"]{
+        margin: 20px 0px;
+    }
+}
+
