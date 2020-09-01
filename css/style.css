@@ -11,7 +11,7 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "Montserrat";
+  font-family: "MontserratBold";
   src: url("../fonts/Montserrat-Bold.ttf");
   font-weight: bold;
   font-display: swap;
@@ -50,11 +50,17 @@ h2 {
 .btn {
   background-color: #33A8E4;
   color: white;
-  font-family: PlayfairNormal;
+  font-family: MontserratBold;
   font-size: 24px;
   padding: 10px 20px;
   border: none;
   outline: none;
+  text-decoration: none;
+}
+
+.btn-white {
+  color: #33A8E4;
+  background: white;
 }
 
 .container {
@@ -258,6 +264,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 40px 0px;
 }
 
 .reservation-text {
@@ -295,10 +302,11 @@ h2 {
 .reservation-info {
   position: absolute;
   align-items: center;
-  width: 400px;
+  width: 430px;
   height: 400px;
   background-color: rgba(0, 0, 0, 0.9);
   right: 0px;
+  margin-right: 20px;
 }
 .reservation-info h2 {
   color: #33A8E4;
@@ -325,11 +333,144 @@ h2 {
   margin-right: 20px;
   background-color: rgba(0, 0, 0, 0.9);
   color: white;
-  padding: 5px 10px;
+  height: 35px;
+  min-width: 130px;
+  padding-left: 40px;
   border: 1px solid white;
+  background-image: url("../images/users-icon.png");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+.res-form .input-block .user-data {
+  border: none;
+  outline: none;
+  font-family: MontserratRegular;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  height: 35px;
+  min-width: 130px;
+  padding-left: 40px;
+  border: 1px solid white;
+  background-image: url("../images/calendar-white.png");
+  background-repeat: no-repeat;
+  background-position: 10px center;
 }
 .res-form input[type=submit] {
   margin: 20px 0px;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 50px 0px;
+}
+
+.service-box {
+  max-width: 350px;
+  box-shadow: 2px 2px 3px #33A8E4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 80px 20px;
+}
+.service-box h2 {
+  font-size: 32px;
+  font-family: MontserratBold;
+  margin: 20px 0px 40px 0px;
+}
+.service-box p {
+  font-family: PlayfairNormal;
+  font-size: 16px;
+}
+.service-box .btn {
+  margin: 50px 0;
+  width: 190px;
+  text-align: center;
+}
+
+.service-box:nth-child(3) {
+  margin: 0px 60px;
+  background: #33A8E4;
+  box-shadow: none;
+  margin-top: -45px;
+}
+.service-box:nth-child(3) h2, .service-box:nth-child(3) p {
+  color: white;
+}
+
+.line-text {
+  position: absolute;
+  left: -360px;
+  transform: rotate(-90deg);
+  font-family: PlayfairNormal;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+}
+.line-text p {
+  margin: 0px 12px;
+}
+.line-text span {
+  color: #33A8E4;
+}
+.line-text .one-line {
+  width: 170px;
+  height: 2px;
+  background: #33A8E4;
+}
+
+.meet-us {
+  width: 100%;
+  background-image: url("../images/meet-us-room.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 60px 0px;
+}
+.meet-us .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.meet-left {
+  max-width: 500px;
+  color: white;
+}
+.meet-left h2 {
+  font-family: MontserratBold;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.meet-left h2 span {
+  color: #33A8E4;
+}
+.meet-left p {
+  font-family: PlayfairNormal;
+  font-size: 16px;
+}
+
+.meet-right {
+  position: relative;
+}
+.meet-right .meet-logo {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  max-width: 150px;
+}
+
+.meet-title {
+  position: relative;
+}
+.meet-title img {
+  position: absolute;
+  top: -60px;
+  left: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */
