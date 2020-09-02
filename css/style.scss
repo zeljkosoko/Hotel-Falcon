@@ -446,3 +446,113 @@ h2 {
         left: 50px;
     }
 }
+.apartments {
+    margin-top: 30px;
+}
+.apart-title-line {
+    display: flex;
+    align-items: center;
+    h2 {
+        font-family: MontserratBold;
+        strong {
+            color: $blue;
+        }
+    }
+    .apart-line{
+        width: 560px;
+        height: 2px;
+        background-color: $blue;
+        margin-left: 20px;
+    }
+}
+.apartments-title {
+    .blue-line {
+        width: 233px;
+    }
+    p {
+        font-family: PlayfairNormal;
+        padding-left: 30px;
+    }
+}
+.apartments-content {
+    margin-top: 30px;
+}
+.apartment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 80px 0px;
+    .apartment-text {
+        max-width: 460px;
+    }
+    h2 {
+        font-family: MontserratBold;
+        strong{
+            color:$blue;
+        }
+    }
+    p {
+        font-family: PlayfairNormal;
+        font-size: 16px;
+    }
+    .apartment-image{
+        position: relative; //da bude marginisanje izmedju 2 child image  
+        .img-master{
+            box-shadow: 10px 10px $blue;
+            z-index: 3;
+        }
+        .img-pattern{
+            z-index: 2;
+            margin-right: -70px; //posto mu je master img sa desne strane
+            margin-bottom: -70px;
+        }
+    }
+}
+.connecting {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 71px;
+    left: 342px;
+    z-index: 99;
+    .connect-line{
+        width: 400px;
+        height: 1px;
+        background-color: $blue;
+    }
+    .connect-circle {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: $blue;
+    }
+}
+.apart-reverse {
+    flex-direction: row-reverse;
+   .connecting {
+    flex-direction: row-reverse;
+    left: 540px;
+   }
+   .apartment-image .img-master {
+       box-shadow: none;
+       position: relative;
+   }
+   .apartment-image::after{
+       position: absolute;
+       content: "";
+       width: 100px;
+       height: 100px;
+       background-color: $blue;
+       bottom: -30px;
+       right: -30px;
+   }
+   .apartment-text {
+       display: flex;
+       flex-direction: column;
+       align-items: flex-end;
+       p{
+           text-align: right;
+       }
+   }
+}

@@ -473,4 +473,119 @@ h2 {
   left: 50px;
 }
 
+.apartments {
+  margin-top: 30px;
+}
+
+.apart-title-line {
+  display: flex;
+  align-items: center;
+}
+.apart-title-line h2 {
+  font-family: MontserratBold;
+}
+.apart-title-line h2 strong {
+  color: #33A8E4;
+}
+.apart-title-line .apart-line {
+  width: 560px;
+  height: 2px;
+  background-color: #33A8E4;
+  margin-left: 20px;
+}
+
+.apartments-title .blue-line {
+  width: 233px;
+}
+.apartments-title p {
+  font-family: PlayfairNormal;
+  padding-left: 30px;
+}
+
+.apartments-content {
+  margin-top: 30px;
+}
+
+.apartment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin: 80px 0px;
+}
+.apartment .apartment-text {
+  max-width: 460px;
+}
+.apartment h2 {
+  font-family: MontserratBold;
+}
+.apartment h2 strong {
+  color: #33A8E4;
+}
+.apartment p {
+  font-family: PlayfairNormal;
+  font-size: 16px;
+}
+.apartment .apartment-image {
+  position: relative;
+}
+.apartment .apartment-image .img-master {
+  box-shadow: 10px 10px #33A8E4;
+  z-index: 3;
+}
+.apartment .apartment-image .img-pattern {
+  z-index: 2;
+  margin-right: -70px;
+  margin-bottom: -70px;
+}
+
+.connecting {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 71px;
+  left: 342px;
+  z-index: 99;
+}
+.connecting .connect-line {
+  width: 400px;
+  height: 1px;
+  background-color: #33A8E4;
+}
+.connecting .connect-circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #33A8E4;
+}
+
+.apart-reverse {
+  flex-direction: row-reverse;
+}
+.apart-reverse .connecting {
+  flex-direction: row-reverse;
+  left: 540px;
+}
+.apart-reverse .apartment-image .img-master {
+  box-shadow: none;
+  position: relative;
+}
+.apart-reverse .apartment-image::after {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 100px;
+  background-color: #33A8E4;
+  bottom: -30px;
+  right: -30px;
+}
+.apart-reverse .apartment-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.apart-reverse .apartment-text p {
+  text-align: right;
+}
+
 /*# sourceMappingURL=style.css.map */
