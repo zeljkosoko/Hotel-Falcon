@@ -649,7 +649,7 @@ h2 {
   height: 100%;
 }
 .gallery-item .item-text h2 {
-  margin: 100px 0 20px 0;
+  margin: 40px 0 20px 0;
 }
 .gallery-item .item-text p {
   max-width: 350px;
@@ -809,6 +809,100 @@ h2 {
   width: 12px;
   height: 12px;
   background-color: #33A8E4;
+}
+
+.sponsors {
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletter {
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.newsletter h2 {
+  font-family: MontserratBold;
+  font-size: 18px;
+  margin-right: 40px;
+}
+.newsletter form {
+  display: flex;
+  align-items: center;
+}
+.newsletter input[type=email] {
+  width: 240px;
+  height: 32px;
+  font-family: MontserratBold;
+  font-size: 18px;
+  color: #33A8E4;
+  padding-left: 10px;
+  margin-right: 10px;
+  border: 2px solid black;
+}
+
+footer {
+  margin-top: 50px;
+  width: 100%;
+  background-image: url("../images/footer-img.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px 0px 12px 0px;
+  position: relative;
+}
+
+.logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.footer-main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.footer-main .footer-column:nth-child(2) .logos {
+  margin-top: 60px;
+}
+
+.footer-text {
+  font-family: MontserratBold;
+  font-size: 18px;
+  color: white;
+}
+.footer-text span {
+  color: #33A8E4;
+  margin-right: 15px;
+}
+
+.logos {
+  margin-top: 40px;
+}
+.logos img:nth-child(2) {
+  margin: 0 12px;
+}
+
+.rights p {
+  text-align: center;
+  font-family: MontserratRegular;
+  font-size: 14px;
+  color: white;
+  margin-top: 40px;
+}
+
+.designed-by {
+  position: absolute;
+  transform: rotate(-90deg);
+  bottom: 103px;
+  right: -73px;
+  font-family: MontserratRegular;
+  font-size: 12px;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
