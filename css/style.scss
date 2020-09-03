@@ -751,6 +751,10 @@ h2 {
     border-radius: 50%;
     background-color: #c4c4c4;
     margin: 0 10px;
+    transition: .5s;
+    &:hover {
+        cursor: pointer;
+    }
 }
 .active-dot{
     width: 12px;
