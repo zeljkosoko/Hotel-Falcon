@@ -955,3 +955,46 @@ footer{
         height: 100%;
     }
 }
+.rooms-hero{
+    background-image: url("../images/rooms-bg.png");
+}
+.rooms-hero .hero-img {
+    opacity: 0;
+}
+.rooms-content{
+    padding: 40px 0;
+}
+.room {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    .room-text {
+        margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        h2{
+            font-family: MontserratBold;
+            span{
+                color: $blue;
+            }
+        }
+        .tip-sobe{
+            display: flex;
+            align-items: center;
+            span{
+                margin-left: 20px;
+                font-family: MontserratRegular;
+                font-size: 18px;
+            }
+            margin-bottom: 20px;
+        }
+        p{
+            font-family: PlayfairNormal;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    }
+}
