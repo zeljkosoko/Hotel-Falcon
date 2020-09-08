@@ -72,7 +72,7 @@ h2 {
 .hero {
   width: 100%;
   height: 100vh;
-  background-image: url("../images/restaurant-header.png");
+  background-image: url("../images/hero-bg.png");
   background-repeat: no-repeat;
   background-size: 100% 95%;
   display: flex;
@@ -121,7 +121,6 @@ h2 {
 .hero-img {
   width: 100%;
   height: 85vh;
-  opacity: 0;
 }
 
 .hero-text {
@@ -141,6 +140,7 @@ h2 {
   text-align: center;
   font-family: PlayfairNormal;
   margin-top: 30px;
+  font-size: 19px;
 }
 .hero-text h5 {
   color: white;
@@ -932,10 +932,26 @@ footer {
   position: absolute;
   transform: rotate(-90deg);
   bottom: 103px;
-  right: -73px;
+  right: -58px;
   font-family: MontserratRegular;
   font-size: 10px;
   color: white;
+}
+
+.restaurant-hero {
+  background-image: url("../images/restaurant-header.png");
+}
+
+.gallery-hero {
+  background-image: url("../images/gallery-bg.png");
+}
+
+.gallery-hero .hero-img {
+  opacity: 0;
+}
+
+.restaurant-hero .hero-img {
+  opacity: 0;
 }
 
 .rest-apart {
@@ -951,6 +967,51 @@ footer {
   align-items: center;
   justify-content: space-around;
   margin-bottom: 100px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding-bottom: 50px;
+}
+.gallery img {
+  width: 100%;
+  object-fit: cover;
+}
+.gallery img:nth-child(1) {
+  grid-row: 1;
+  grid-column: 1;
+}
+.gallery img:nth-child(2) {
+  grid-row: 1;
+  grid-column: 2;
+  height: 100%;
+}
+.gallery img:nth-child(3) {
+  grid-row: 1;
+  grid-column: 3;
+  height: 100%;
+}
+.gallery img:nth-child(4) {
+  grid-row: 2/span 3;
+  grid-column: 1;
+  height: 100%;
+}
+.gallery img:nth-child(5) {
+  grid-row: 2;
+  grid-column: 2/span 3;
+}
+.gallery img:nth-child(6) {
+  grid-row: 3;
+  grid-column: 2;
+  height: 100%;
+}
+.gallery img:nth-child(7) {
+  grid-row: 3;
+  grid-column: 3;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
