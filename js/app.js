@@ -1,4 +1,6 @@
-var sliders = document.querySelectorAll('.slide')
+var slides = document.querySelectorAll('.slide');
+var slider = document.querySelector('.slider');
+
 var dot1 = document.querySelector('.dot1');
 var dot2 = document.querySelector('.dot2');
 var dot3 = document.querySelector('.dot3');
@@ -7,30 +9,37 @@ var dots = document.querySelectorAll('.dot');
 var index = 0;
 
 //sakri sve sem prvog
-hideSliders(index);
+//hideSlides(index);
 
-dot1.addEventListener('click', function(){
-    hideSliders(0);
-    removeActive();
-    this.classList.add('active-dot');
-});
-dot2.addEventListener('click', function(){
-    hideSliders(1);
-    removeActive();
-    this.classList.add('active-dot');
-});
-dot3.addEventListener('click', function(){
-    hideSliders(2);
-    removeActive();
-    this.classList.add('active-dot');
+dots.forEach((dot,i) => { 
+    dot.addEventListener('click', () => {
+        slider.style.right = i*100+'%';
+        removeActive();
+        dot.classList.add('active-dot');
+    })
 });
 
-function hideSliders(num){
-    for(var i = 0;i < sliders.length;i++){
-        sliders[i].style.display = "none";
-    }
-    sliders[num].style.display = "block";
-}
+// dot1.addEventListener('click', function(){
+//     removeActive();
+//     this.classList.add('active-dot');
+// });
+// dot2.addEventListener('click', function(){
+//    slider.style.right = "100%";
+//     removeActive();
+//     this.classList.add('active-dot');
+// });
+// dot3.addEventListener('click', function(){
+    
+//     removeActive();
+//     this.classList.add('active-dot');
+// });
+
+// function hideSlides(num){
+//     for(var i = 0;i < sliders.length;i++){
+//         slides[i].style.display = "none";
+//     }
+//     slides[num].style.display = "block";
+// }
 
 function removeActive(){
     for(var i = 0; i<dots.length; i++){

@@ -758,25 +758,38 @@ h2 {
 }
 
 .slider {
-  margin: 50px 0px;
+  margin-top: 50px;
+  overflow-x: hidden;
+  max-width: none;
+  position: relative;
+  display: flex;
+  width: 300vw;
+  transition: 0.5s;
+  right: 0;
+}
+
+.slide {
+  transition: 0.5s;
+  width: 100vw;
+  padding-bottom: 10px;
 }
 
 .slide-row {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-top: 50px;
 }
 
 .review {
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 0px 4px 6px #33A8E4;
-  padding: 30px 15px;
+  box-shadow: 0px 0px 3px 3px #33A8E4;
+  padding: 20px 10px;
   position: relative;
 }
 .review p {
-  max-width: 600px;
+  max-width: 500px;
   font-family: PlayfairNormal;
   font-size: 16px;
   margin-top: 30px;
