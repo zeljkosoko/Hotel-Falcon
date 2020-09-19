@@ -79,6 +79,7 @@ h2 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    position: relative; 
 }
 .navigation {
     display: flex;
@@ -166,7 +167,7 @@ h2 {
     }
     border-right: 1px solid black;
     padding: 0 15px;
-    &:nth-last-child(2){
+    &:nth-last-child(1){
         border-right: 0px;
     }
     select {
@@ -225,9 +226,16 @@ h2 {
 }
 .search-phone{
     position: absolute; //absolute in its relative parent i.e. rigth coordinate:
-    right: -170px;
+    top: 50%;
+    right: -122px;
+    z-index: 9;
     background-color:rgba(51,168,228, 0.7);
     border-radius: 10px;
+    transition: .5s;
+    &:hover{
+        cursor: pointer;
+        right: -8px;
+    }
     p {
         font-size: 10px;
         color: white;
@@ -240,7 +248,7 @@ h2 {
     padding: 10px;
     color: white;
     .phone-text {
-        margin-left: 5px;
+        margin-left: 15px;
     }
 }
 .phonepart {
@@ -387,6 +395,10 @@ h2 {
         color: white;
     }
     margin-top: -45px;
+}
+.lookAt{
+    text-align: center;
+    margin: 20px 0;
 }
 .line-text {
     position: absolute;

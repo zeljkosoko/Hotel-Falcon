@@ -79,6 +79,7 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .navigation {
@@ -174,7 +175,7 @@ h2 {
   font-family: PlayfairNormal;
   font-size: 16px;
 }
-.search-part:nth-last-child(2) {
+.search-part:nth-last-child(1) {
   border-right: 0px;
 }
 .search-part select {
@@ -236,9 +237,16 @@ h2 {
 
 .search-phone {
   position: absolute;
-  right: -170px;
+  top: 50%;
+  right: -122px;
+  z-index: 9;
   background-color: rgba(51, 168, 228, 0.7);
   border-radius: 10px;
+  transition: 0.5s;
+}
+.search-phone:hover {
+  cursor: pointer;
+  right: -8px;
 }
 .search-phone p {
   font-size: 10px;
@@ -253,7 +261,7 @@ h2 {
   color: white;
 }
 .phone-card .phone-text {
-  margin-left: 5px;
+  margin-left: 15px;
 }
 
 .phonepart {
@@ -409,6 +417,11 @@ h2 {
 }
 .service-box:nth-child(3) h2, .service-box:nth-child(3) p {
   color: white;
+}
+
+.lookAt {
+  text-align: center;
+  margin: 20px 0;
 }
 
 .line-text {
