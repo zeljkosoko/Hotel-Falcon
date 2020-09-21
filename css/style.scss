@@ -919,6 +919,9 @@ footer{
 .about-hero{
     background-image: url("../images/about-header.png");
 }
+.contact-hero{
+    background-image: url("../images/contact-us.png");
+}
 .gallery-hero .hero-img {
     opacity: 0;
 }
@@ -1049,4 +1052,60 @@ footer{
 .about-reverse{
     flex-direction: row-reverse;
     padding: 80px 0;
+}
+.contact-p {
+    text-align: center;
+    font-family: PlayfairNormal;
+    font-size: 19px;
+    margin-top: 50px;
+}
+.contact-main{
+    margin-top: 50px;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    iframe{
+        box-shadow: 6px 6px $blue;
+        border: solid 2px $blue !important;//mora important jer ima inline style
+    }
+    #form-main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 500px;
+        label{
+            display: flex;
+            flex-direction: column;
+            font-family: MontserratBold;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        input {
+            margin-top: 5px;
+            padding-left: 10px;
+            outline: none;
+            border: solid 2px $blue;
+            width: 300px;
+        }
+        input[type="text"], input[type="number"]{
+            min-height: 33px;
+        }
+        input[type="number"]::-webkit-inner-spin-button, 
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+            -moz-appearance: textfield;
+        }
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+        textarea{
+            border:solid 2px $blue;
+            width: 300px;
+        }
+        #sub-btn{
+            width: 200px;
+            text-align: center;
+        }
+    }
 }
