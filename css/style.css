@@ -1241,9 +1241,6 @@ footer {
   font-size: 24px;
   margin-top: 50px;
 }
-.room-text .big-p {
-  font-size: 20px;
-}
 .room-text .small-p {
   font-size: 18px;
 }
@@ -1298,6 +1295,23 @@ footer {
   font-family: PlayfairNormal;
   font-size: 15px;
   margin-left: 10px;
+}
+
+.room-header {
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  width: 50%;
+  text-align: center;
+}
+.room-header h1 {
+  color: #33A8E4;
+  font-size: 48px;
+  font-family: MontserratBold;
+}
+.room-header p {
+  font-family: PlayfairNormal;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

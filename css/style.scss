@@ -1166,9 +1166,6 @@ footer{
         font-size: 24px;
         margin-top: 50px;
     }
-    .big-p{
-        font-size: 20px;
-    }
     .small-p{
         font-size: 18px;
     }
@@ -1221,3 +1218,20 @@ footer{
         margin-left: 10px;
     }
 }
+.room-header{
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    width: 50%;
+    text-align: center;
+    h1{
+        color: $blue;
+        font-size: 48px;
+        font-family: MontserratBold;
+    }
+    p{
+        font-family: PlayfairNormal;
+        color: white;
+    }
+}
+
