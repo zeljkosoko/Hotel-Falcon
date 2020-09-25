@@ -1314,4 +1314,59 @@ footer {
   color: white;
 }
 
+.menu {
+  margin-top: 80px;
+}
+.menu .menu-title {
+  width: 500px;
+  margin-top: 50px;
+}
+.menu .menu-title h2 {
+  font-family: MontserratBold;
+  font-size: 36px;
+}
+.menu .menu-title p {
+  font-family: PlayfairNormal;
+  font-size: 16px;
+}
+.menu .menu-content {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.menu .menu-content .menu-column {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+.menu .menu-content .menu-column:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  background-color: #33A8E4;
+  margin-left: -40px;
+}
+.menu .menu-content .menu-column .menu-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.menu .menu-content .menu-column .menu-item .menu-text {
+  margin: 0 40px;
+}
+.menu .menu-content .menu-column .menu-item .menu-text h4 {
+  font-family: MontserratBold;
+  font-size: 14px;
+}
+.menu .menu-content .menu-column .menu-item .menu-text p {
+  font-family: MontserratRegular;
+  font-size: 14px;
+}
+.menu .menu-content .menu-column .menu-item .menu-price h4 {
+  font-family: Playfair;
+  font-size: 14px;
+}
+
 /*# sourceMappingURL=style.css.map */
