@@ -1,3 +1,14 @@
+<?php
+
+//konekcija i odgovarajuca funkcija
+require 'functions/db-conn.php';
+require 'functions/funkcije.php';
+
+$sobe = getRooms();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,54 +101,22 @@
         <img src="images/separator.png" alt="">
     </div>
    <div class="rooms-content container">
-        <div class="room">
-            <img src="images/master.png" alt="">
-            <div class="room-text">
-                <h2><span>Master</span> soba</h2>
-                <div class="tip-sobe">
-                    <img src="images/room-icon.png" alt="">
-                    <span>Dvokrevetna soba - francuski + standard</span>
+        <?php if($sobe -> num_rows > 0) { ?>
+            <?php while($soba = $sobe -> fetch_assoc()) { ?>
+                <div class="room">
+                    <img src="images/master.png" alt="">
+                    <div class="room-text">
+                        <h2><?php echo $soba['naziv']; ?></h2>
+                        <div class="tip-sobe">
+                            <img src="images/room-icon.png" alt="">
+                            <span><?php echo $soba['tip']; ?></span>
+                        </div>
+                        <p><?php echo $soba['detaljnije']; ?></p>
+                        <a href="room.php?id=<?php echo $soba['sobaID']; ?>" class="btn">Pogledaj sobu</a>
+                    </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitasse blandit scelerisque ac adipiscing sed faucibus. Ligula mattis amet, porttitor rutrum iaculis pellentesque. Et facilisis purus non nibh ipsum gravida pellentesque congue. Felis habitant euismod auctor arcu vel et eu posuere. Pharetra ac a elit est neque amet risus. Et eu at mi nunc. Viverra nunc sed aliquet proin.</p>
-                <a href="#" class="btn">Pogledaj sobu</a>
-            </div>
-        </div>
-        <div class="room">
-            <img src="images/aparts-superior.png" alt="">
-            <div class="room-text">
-                <h2><span>Superior</span> soba</h2>
-                <div class="tip-sobe">
-                    <img src="images/room-icon.png" alt="">
-                    <span>Dvokrevetna soba plus dodatni lezaj </span>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitasse blandit scelerisque ac adipiscing sed faucibus. Ligula mattis amet, porttitor rutrum iaculis pellentesque. Et facilisis purus non nibh ipsum gravida pellentesque congue. Felis habitant euismod auctor arcu vel et eu posuere. Pharetra ac a elit est neque amet risus. Et eu at mi nunc. Viverra nunc sed aliquet proin.</p>
-                <a href="#" class="btn">Pogledaj sobu</a>
-            </div>
-        </div>
-        <div class="room">
-            <img src="images/aparts-standard.png" alt="">
-            <div class="room-text">
-                <h2><span>Standard</span> soba</h2>
-                <div class="tip-sobe">
-                    <img src="images/room-icon.png" alt="">
-                    <span>Dvokrevetna soba</span>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitasse blandit scelerisque ac adipiscing sed faucibus. Ligula mattis amet, porttitor rutrum iaculis pellentesque. Et facilisis purus non nibh ipsum gravida pellentesque congue. Felis habitant euismod auctor arcu vel et eu posuere. Pharetra ac a elit est neque amet risus. Et eu at mi nunc. Viverra nunc sed aliquet proin.</p>
-                <a href="#" class="btn">Pogledaj sobu</a>
-            </div>
-        </div>
-        <div class="room">
-            <img src="images/rooms-classic.png" alt="" class="room-img">
-            <div class="room-text">
-                <h2><span>Classic</span> soba</h2>
-                <div class="tip-sobe">
-                    <img src="images/room-icon.png" alt="">
-                    <span>Dvokrevetna soba</span>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitasse blandit scelerisque ac adipiscing sed faucibus. Ligula mattis amet, porttitor rutrum iaculis pellentesque. Et facilisis purus non nibh ipsum gravida pellentesque congue. Felis habitant euismod auctor arcu vel et eu posuere. Pharetra ac a elit est neque amet risus. Et eu at mi nunc. Viverra nunc sed aliquet proin.</p>
-                <a href="#" class="btn">Pogledaj sobu</a>
-            </div>
-        </div>
+            <?php }; ?>
+        <?php }; ?>
    </div>
     <div class="newsletter">
         <h2>Prijavite se za Newsletter</h2>

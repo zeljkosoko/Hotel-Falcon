@@ -1,3 +1,15 @@
+<?php 
+//konekcije i odgovarajuca funkcija
+require 'functions/db-conn.php';
+require 'functions/funkcije.php';
+
+//$_GET je super global variabla koja getuje ID sa forme
+$id = $_GET['id'];
+$soba_array = getRoom($id);
+$soba = mysqli_fetch_array($soba_array, MYSQLI_ASSOC);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,8 +45,8 @@
             <div class="opacity-cover"></div>
         </div>
         <div class="room-header">
-            <h1>Master room</h1>
-            <p class="big-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat faucibus viverra interdum enim sed.</p>
+            <h1><?php echo $soba['naziv']; ?></h1>
+            <p class="big-p"><?php echo $soba['opis']; ?></p>
         </div>
     </header>
     <div class="room-details container">
@@ -47,9 +59,9 @@
             </div>
         </div>
         <div class="room-text">
-            <h3>Dvokrevetna soba - francuski + standard krevet</h3>
+            <h3><?php echo $soba['tip'] ?></h3>
             <div class="blue-line"></div>
-            <p class="small-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat faucibus viverra interdum enim sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat faucibus viverra interdum enim sed.</p>
+            <p class="small-p"><?php echo $soba['detaljnije'] ?></p>
             <div class="room-devices">
                 <div class="room-device">
                     <img src="images/room-table.png" alt="">
@@ -80,7 +92,7 @@
             </div>
             <div class="blue-line full-line"></div>
             <div class="room-price">
-                <p>već od <span>4900</span>RSD</p>
+                <p>već od <span><?php echo $soba['cena'] ?></span>RSD</p>
                 <button class="btn">Rezerviši</button>
             </div>
             <div class="taxi">
