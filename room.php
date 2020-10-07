@@ -63,18 +63,44 @@ $soba = mysqli_fetch_array($soba_array, MYSQLI_ASSOC);
             <div class="blue-line"></div>
             <p class="small-p"><?php echo $soba['detaljnije'] ?></p>
             <div class="room-devices">
-                <div class="room-device">
-                    <img src="images/room-table.png" alt="">
-                    <span>Radni sto</span>
-                </div>
-                <div class="room-device">
-                    <img src="images/room-fridge.png" alt="">
-                    <span>Mini bar</span>
-                </div>
-                <div class="room-device">
-                    <img src="images/room-ac.png" alt="">
-                    <span>Klima</span>
-                </div>
+                <?php 
+                    $devices = str_split($soba['dodaci']);//dodaci su varchar tj string
+
+                    $details = [
+                        [
+                            "images/room-table.png",
+                            "Radni sto"
+                        ],
+                        [
+                            "images/room-fridge.png",
+                            "Mini bar"
+                        ],
+                        [
+                            "images/room-ac.png",
+                            "Klima"
+                        ],
+                        [
+                            "images/room-tv.png",
+                            "Televizor"
+                        ],
+                        [
+                            "images/room-phone.png",
+                            "TV"
+                        ],
+                        [
+                            "images/room-wifi.png",
+                            "Internet"
+                        ]
+                    ];
+                ?>
+
+                <?php for($i = 0; $i < 3; $i++) { ?>
+                    <div class="room-device">
+                            <img src="<?php echo $details[$i][0]; ?>" alt="">
+                            <span><?php echo $details[$i][1]; ?></span>
+                    </div>
+                <?php }; ?>
+                
             </div>
             <div class="room-devices">
                 <div class="room-device">
