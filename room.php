@@ -7,8 +7,9 @@ require 'functions/funkcije.php';
 $id = $_GET['id'];
 $soba_array = getRoom($id);
 $soba = mysqli_fetch_array($soba_array, MYSQLI_ASSOC);
-?>
 
+$devices_query = getDevices($id);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -63,59 +64,55 @@ $soba = mysqli_fetch_array($soba_array, MYSQLI_ASSOC);
             <div class="blue-line"></div>
             <p class="small-p"><?php echo $soba['detaljnije'] ?></p>
             <div class="room-devices">
-                <?php 
-                    $devices = str_split($soba['dodaci']);//dodaci su varchar tj string
+               <!-- <?php 
+                    // $devices = str_split($soba['dodaci']);//dodaci su varchar tj string
+                    // $details = [
+                    //     [
+                    //         "images/room-table.png",
+                    //         "Radni sto"
+                    //     ],
+                    //     [
+                    //         "images/room-fridge.png",
+                    //         "Mini bar"
+                    //     ],
+                    //     [
+                    //         "images/room-ac.png",
+                    //         "Klima"
+                    //     ],
+                    //     [
+                    //         "images/room-tv.png",
+                    //         "Televizor"
+                    //     ],
+                    //     [
+                    //         "images/room-phone.png",
+                    //         "TV"
+                    //     ],
+                    //     [
+                    //         "images/room-wifi.png",
+                    //         "Internet"
+                    //     ]
+                    // ];
+                ?>  -->
 
-                    $details = [
-                        [
-                            "images/room-table.png",
-                            "Radni sto"
-                        ],
-                        [
-                            "images/room-fridge.png",
-                            "Mini bar"
-                        ],
-                        [
-                            "images/room-ac.png",
-                            "Klima"
-                        ],
-                        [
-                            "images/room-tv.png",
-                            "Televizor"
-                        ],
-                        [
-                            "images/room-phone.png",
-                            "TV"
-                        ],
-                        [
-                            "images/room-wifi.png",
-                            "Internet"
-                        ]
-                    ];
-                ?>
+                <?php if($devices_query -> num_rows > 0) { ?>
+                    <?php while($device = $devices_query -> fetch_assoc()) { ?>
+                        <div class="room-device">
+                            <img src="images/<?php echo $device['slika']; ?>" alt="">
+                            <span><?php echo $device['naziv']?></span>
+                        </div>
+                    <?php }; ?>
+                <?php }; ?>
 
-                <?php for($i = 0; $i < 3; $i++) { ?>
+
+                <!-- <?php for($i = 0; $i < 3; $i++) { ?>
                     <div class="room-device">
                             <img src="<?php echo $details[$i][0]; ?>" alt="">
                             <span><?php echo $details[$i][1]; ?></span>
                     </div>
-                <?php }; ?>
+                <?php }; ?> -->
                 
             </div>
-            <div class="room-devices">
-                <div class="room-device">
-                    <img src="images/room-tv.png" alt="">
-                    <span>Televizor</span>
-                </div>
-                <div class="room-device">
-                    <img src="images/room-phone.png" alt="">
-                    <span>Telefon</span>
-                </div>
-                <div class="room-device">
-                    <img src="images/room-wifi.png" alt="">
-                    <span>Internet</span>
-                </div>
-            </div>
+       
             <div class="blue-line full-line"></div>
             <div class="room-price">
                 <p>već od <span><?php echo $soba['cena'] ?></span>RSD</p>

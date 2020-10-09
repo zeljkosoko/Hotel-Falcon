@@ -17,4 +17,16 @@ function getRoom($id){
     return mysqli_query($conn, $sql); //vracamo mysqli array sa odgovarajucim recordom
 }
 
+function getDevices($id){
+    global $conn;
+
+    $sql = "SELECT * 
+            FROM devices
+            INNER JOIN roomsdevices 
+            ON devices.deviceID=roomsdevices.deviceID
+            WHERE sobaID=$id";
+
+    return mysqli_query($conn, $sql);
+}
+
 ?>
