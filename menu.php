@@ -1,3 +1,8 @@
+<?php
+require 'functions/db-conn.php';
+require 'functions/funkcije.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,66 +47,28 @@
             <h2>Doručak</h2>
             <div class="blue-line"></div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate fusce eget in euismod gravida accumsan. Ornare consectetur diam mi massa. Viverra mi est libero, ut malesuada ut lorem elit.</p>
+            <?php
+                $dorucak_query = getMenu(1);
+            ?>
         </div>
         <div class="menu-content">
-            <div class="menu-column">
-                <div class="menu-item">
-                    <div class="menu-text">
-                        <h4>Tradicionalni Srpski doručak</h4>
-                        <p>Tri jaja na oko, pršuta, sir, paradajz, masline, tost od integralnog hleba</p>
+            <?php if($dorucak_query -> num_rows > 0) { ?>
+                <?php while($dorucak = $dorucak_query -> fetch_assoc()) { ?>
+                    <div class="menu-column">
+                        <div class="menu-item">
+                            <div class="menu-text">
+                                <h4><?php echo($dorucak['naziv']);?></h4>
+                                <p><?php echo($dorucak['sastojci']);?></p>
+                            </div>
+                            <div class="menu-price">
+                                <h4><?php echo($dorucak['cena']);?></h4>
+                            </div>
+                        </div>
                     </div>
-                   <div class="menu-price">
-                       <h4>349 RSD</h4>
-                   </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-text">
-                        <h4>Tradicionalni Srpski doručak</h4>
-                        <p>Tri jaja na oko, pršuta, sir, paradajz, masline, tost od integralnog hleba</p>
-                    </div>
-                   <div class="menu-price">
-                       <h4>349 RSD</h4>
-                   </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-text">
-                        <h4>Tradicionalni Srpski doručak</h4>
-                        <p>Tri jaja na oko, pršuta, sir, paradajz, masline, tost od integralnog hleba</p>
-                    </div>
-                   <div class="menu-price">
-                       <h4>349 RSD</h4>
-                   </div>
-                </div>
-            </div>
-            <div class="menu-column">
-                <div class="menu-item">
-                    <div class="menu-text">
-                        <h4>Tradicionalni Srpski doručak</h4>
-                        <p>Tri jaja na oko, pršuta, sir, paradajz, masline, tost od integralnog hleba</p>
-                    </div>
-                   <div class="menu-price">
-                       <h4>349 RSD</h4>
-                   </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-text">
-                        <h4>Tradicionalni Srpski doručak</h4>
-                        <p>Tri jaja na oko, pršuta, sir, paradajz, masline, tost od integralnog hleba</p>
-                    </div>
-                   <div class="menu-price">
-                       <h4>349 RSD</h4>
-                   </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-text">
-                        <h4>Tradicionalni Srpski doručak</h4>
-                        <p>Tri jaja na oko, pršuta, sir, paradajz, masline, tost od integralnog hleba</p>
-                    </div>
-                   <div class="menu-price">
-                       <h4>349 RSD</h4>
-                   </div>
-                </div>
-            </div>
+                <?php }; ?>
+            <?php }; ?>
+         
+         
         </div>
         <div class="menu-title">
             <h2>Ručak</h2>

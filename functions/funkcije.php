@@ -29,4 +29,14 @@ function getDevices($id){
     return mysqli_query($conn, $sql);
 }
 
+function getMenu($id){
+    global $conn;
+
+    $sql = "SELECT * 
+            FROM menu
+            WHERE categoryID = $id";
+    
+    return mysqli_query($conn, $sql);
+}
+
 ?>

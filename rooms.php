@@ -1,13 +1,10 @@
 <?php
-
 //konekcija i odgovarajuca funkcija
 require 'functions/db-conn.php';
 require 'functions/funkcije.php';
 
 $sobe = getRooms();
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
