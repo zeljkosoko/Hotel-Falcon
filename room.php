@@ -3,7 +3,7 @@
 require 'functions/db-conn.php';
 require 'functions/funkcije.php';
 
-//$_GET je super global variabla koja getuje ID sa forme
+//$_GET je super global variabla koja getuje id sa url adrese
 $id = $_GET['id'];
 $soba_array = getRoom($id);
 $soba = mysqli_fetch_array($soba_array, MYSQLI_ASSOC);
